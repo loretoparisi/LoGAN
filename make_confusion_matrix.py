@@ -3,7 +3,7 @@
 import os
 import pandas as pd 
 
-PATH = 'C:\\Code\\Thesis\\LoGAN\\results\\'
+PATH = '/root/logan'
 VERBOSE = True
 
 
@@ -25,7 +25,7 @@ for folder in folders:
         color_count_1st[colors['compact middle'][row]] += 1
       
              
-    with open('C:\\Code\\Thesis\\AC-WGAN-GP_from_vm\\results\\confusion_matrix_second_color_epoch_400.csv', 'a') as the_file:
+    with open('/root/logan/confusion_matrix_second_color_epoch_400.csv', 'a') as the_file:
         the_file.write('\n' + folder )
         for i in range(0,12):
             the_file.write(';' + str(color_count_1st[folders[i]]))

@@ -9,8 +9,8 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 
-Data_PATH = 'C:\\Code\\Thesis\\LoGAN\\data\\logos' 
-label_csv_PATH = 'C:\\Code\\Thesis\\LoGAN\\data\\one_hot_encoding_color_icon.csv' 
+Data_PATH = '/root/logan/logos' 
+label_csv_PATH = '/root/logan/one_hot_encoding_color_icon.csv' 
 
 
 # Parameters

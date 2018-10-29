@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import matplotlib
+matplotlib.use('TkAgg')
 
 import os
 import sys
@@ -8,7 +10,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import MiniBatchKMeans
 
 
-PATH = 'C:\\Code\\Thesis\\LoGAN\\'
+PATH = '/root/logan/'
 TRAINING = True
 VERBOSE = True
 
@@ -16,7 +18,7 @@ if TRAINING:
     folders = ['data']
 else:
     folders = ['green', 'purple', 'white', 'brown', 'blue', 'cyan', 'yellow', 'gray', 'red',  'pink', 'orange', 'black']
-    PATH = PATH + 'results\\'
+    PATH = PATH + '/'
 
 def find_histogram(clt):
     """
@@ -55,7 +57,7 @@ for folder in folders:
         with open(PATH+'colors.csv', 'w') as the_file:
             the_file.write('file name;colors;amount color')
     else:
-        with open(PATH+'results\\color_' + folder + '.csv', 'a') as the_file:
+        with open(PATH+'color_' + folder + '.csv', 'a') as the_file:
             the_file.write('file name;colors;amount color')
 
 
@@ -96,7 +98,7 @@ for folder in folders:
                 with open(PATH+'colors.csv', 'a') as the_file:
                     the_file.write('\n' + str(fn) + ';' + str(clt.cluster_centers_[0]) + ',' + str(clt.cluster_centers_[1]) + ',' + str(clt.cluster_centers_[2]) + ';' + str(hist))
             else:
-                with open(PATH+'results\\color_' + folder + '.csv', 'a') as the_file:
+                with open(PATH+'color_' + folder + '.csv', 'a') as the_file:
                     the_file.write('\n' + str(fn) + ';' + str(clt.cluster_centers_[0]) + ',' + str(clt.cluster_centers_[1]) + ',' + str(clt.cluster_centers_[2]) + ';' + str(hist))
                 
             

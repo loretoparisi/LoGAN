@@ -5,7 +5,7 @@ import re
 import pandas as pd
 import webcolors
 
-PATH = 'C:\\Code\\Thesis\\LoGAN\\'
+PATH = '/root/logan/'
 TRAINING = True
 VERBOSE = True
 
@@ -13,7 +13,7 @@ if TRAINING:
     folders = ['data']
 else:
     folders = ['green', 'purple', 'white', 'brown', 'blue', 'cyan', 'yellow', 'gray', 'red',  'pink', 'orange', 'black']
-    PATH = PATH + 'results\\'
+    PATH = PATH + 'results/'
 
 
 os.chdir(PATH)
