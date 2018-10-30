@@ -174,11 +174,11 @@ for folder in folders:
         cnt+=1
         if VERBOSE:
             if TRAINING:
-                    sys.stdout.write("Progress: {:.2%}\r".format(cnt/485377))
-                    sys.stdout.flush()
-                else:
-                    sys.stdout.write("Progress: {:.2%}\r".format(cnt/26000))
-                    sys.stdout.flush()    
+                sys.stdout.write("Progress: {:.2%}\r".format(cnt/485377))
+                sys.stdout.flush()
+            else:
+                sys.stdout.write("Progress: {:.2%}\r".format(cnt/26000))
+                sys.stdout.flush()    
     colors['color word'] = list_colors_3  
     colors['color word compact'] = list_compact_3
     
